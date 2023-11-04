@@ -1,38 +1,323 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --bg-color: #e9ebec;
+  --pro-name-color: #3d3d3d;
+  --major-name: #575757;
+  --social-link: #575757;
+  --number: #3d3d3d;
+  --download-button: #3d3d3d;
+  --filter: #19191b;
+  --bg-color-download: #fff;
+  --bg-color-download-hover: #fbd144;
+  --bg-color-portfolio-hover: #d7d7d7;
+  --copyright: #575757;
+}
+.dark-theme {
+  --bg-color: #0c151d;
+  --pro-name-color: #f1f2f4;
+  --major-name: #a3abb2;
+  --social-link: #a3abb2;
+  --number: #a3abb2;
+  --download-button: #a3abb2;
+  --filter: #a3abb2;
+  --bg-color-download: #171f26;
+  --bg-color-download-hover: #ffe071;
+  --bg-color-portfolio-hover: #0c151d;
+  --copyright: #a3abb2;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins";
+}
+.container {
+  max-width: 760px;
+  margin: auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme_change {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 53px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theme_change:hover {
+  background-color: grey;
+  transition: all 0.5s;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.theme_change img {
+  margin: 10px;
+}
+.profile_img {
+  height: 215px;
+  width: 215px;
+}
+.profile {
   display: flex;
-  flex-direction: column;
+  gap: 5%;
+  align-items: center;
+}
+.social_links {
+  display: flex;
+  gap: 26px;
+  height: 51px;
+  margin-top: 12px;
+  color: var(--social-link);
+}
+.social_links div {
+  width: 36px;
+  height: 36px;
+}
+.social_links div img {
+  width: 100%;
+}
+.profile_info {
+  text-align: start;
+}
+
+.profile_name {
+  font-size: 46px;
+  color: var(--pro-name-color);
+}
+.profile_major {
+  font-size: 22px;
+  color: var(--major-name);
+}
+.experiences {
+  display: flex;
+  gap: 90px;
+  width: 630px;
+  margin-top: 48px;
+  font-weight: 500;
+  padding: 20px 2px;
+}
+.experience {
+  width: 125px;
+  height: 102px;
+  font-size: 22px;
+  color: var(--number);
+}
+.experience .number {
+  font-size: 24px;
+  color: var(--number);
+}
+
+.download_contact {
+  display: flex;
+  width: 618px;
+  gap: 38px;
+  align-items: center;
+  margin-top: 40px;
+  color: var(--download-button);
+}
+
+.info_button {
+  height: 80px;
+  width: 290px;
+  font-size: 22px;
+  color: var(--download-button);
+  border-radius: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  cursor: pointer;
+  background-color: var(--bg-color-download);
 }
 
-.App-link {
-  color: #61dafb;
+.info_button:hover {
+  background-color: var(--bg-color-download-hover);
+}
+.filter {
+  width: 760px;
+  height: 110px;
+  font-size: 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 75px;
+  color: var(--filter);
+  background-color: var(--bg-color-download);
+}
+.filter_button {
+  width: 351px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.filter_button:hover {
+  background-color: var(--bg-color-portfolio-hover);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image {
+  width: 362px;
+  height: 226px;
+}
+.row1 {
+  display: flex;
+  gap: 32px;
+}
+.row2 {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+}
+.row3 {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+}
+.copy_right {
+  font-size: 22px;
+  margin-top: 130px;
+  margin-bottom: 80px;
+  color: var(--copyright);
+}
+.cards {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 76px;
+}
+.card {
+  width: 362px;
+  height: 226px;
+}
+.hoverText {
+  position: absolute;
+  background-color: #ffe071;
+  width: 62px;
+  height: 226px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: #3d3d3d;
+  gap: 3px;
+}
+.hoverText:hover {
+  opacity: 0.88;
+  transition: opacity ease-in 2s;
+  transition: width ease-in 2s;
+  transform: rotate(0.5turn);
+  transition: transform 2s;
+  width: 362px;
+}
+.linkBG {
+  background-color: #fff;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+
+.hoverText h3 {
+  font-weight: 500;
+}
+.hoverText p {
+  font-weight: 400;
+}
+/* this is for tablets */
+@media screen and (max-width: 768px) {
+}
+/* this is for mobile */
+@media screen and (max-width: 480px) {
+  .profile {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .filter {
+    width: 90%;
+    margin: auto;
+  }
+  .profile_img {
+    width: 124px;
+    height: 124px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .profile_name {
+    font-size: 32px;
+    text-align: center;
+  }
+  .profile_major {
+    font-size: 12px;
+    text-align: center;
+  }
+  .social_links div {
+    width: 24px;
+  }
+  .social_links {
+    justify-content: center;
+  }
+  .number {
+    font-size: 16px !important;
+  }
+  .experience {
+    font-size: 14px;
+  }
+  .experiences {
+    gap: 0px;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  .social_links {
+    height: 50px;
+  }
+  .info_button {
+    font-size: 12px;
+    width: 158px;
+    height: 44px;
+  }
+  .download_contact {
+    gap: 10px;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+  }
+  .filter {
+    font-size: 14px;
+    width: 330px;
+    height: 64px;
+    gap: 0px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    justify-content: space-around;
+  }
+  .filter_button {
+    width: 154px;
+    height: 50.303px;
+  }
+  .cards {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .card {
+    width: 340px;
+    height: 210px;
+    margin: auto;
+  }
+  .card img {
+    width: 100%;
+  }
+  .copy_right {
+    font-size: 14px;
   }
 }
