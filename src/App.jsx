@@ -1,13 +1,16 @@
-import "./App.css";
 import { products } from "./data";
-import Card from "./components/Card";
+import Card from "./components/card/Card";
+import Header from "./components/header/Header";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      {/* <h2>Hello World</h2> */}
-      <div>
-        <Card product={products[0]} />
+      <Header />
+      <div className="cards">
+        {products.map((product) => {
+          return <Card product={product} />;
+        })}
       </div>
     </div>
   );

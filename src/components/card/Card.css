@@ -1,0 +1,48 @@
+.card {
+  width: 180px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 6px 10px grey;
+  position: relative;
+  gap: 8px;
+}
+.card button {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(34, 118, 133);
+  color: rgb(240, 233, 233);
+  width: 100%;
+  height: 40px;
+  border-radius: 0px 0px 10px 10px;
+  border: none;
+}
+.card_name {
+  font-weight: 700;
+  text-align: center;
+}
+.card_desc {
+  color: grey;
+  font-size: 13px;
+  text-align: center;
+  width: 80%;
+}
+
+.card_star {
+  width: 24px;
+}
+.card_rating {
+  position: absolute;
+  bottom: 50px;
+}
+.card_image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.card button:active {
+  opacity: 0.9;
+}
