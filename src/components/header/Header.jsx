@@ -1,11 +1,17 @@
 function Header() {
   return (
-    <div>
+    <div className="header">
       <div>
-        <input type="text" id="search" name="Search" placeholder="Search" />
-        <button>Search</button>
+        <input
+          className="searchInput"
+          type="text"
+          id="search"
+          name="Search"
+          placeholder="Search"
+        />
+        <button className="searchBtn">Search</button>
       </div>
-      <div>
+      <div className="options">
         <select name="Category" id="Category">
           <option value="">Electronics</option>
         </select>
