@@ -1,7 +1,8 @@
+import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <div>
+      <div className="search">
         <input
           className="searchInput"
           type="text"
@@ -12,13 +13,13 @@ function Header() {
         <button className="searchBtn">Search</button>
       </div>
       <div className="options">
-        <select name="Category" id="Category">
+        <select className="option" name="Category" id="Category">
           <option value="">Electronics</option>
         </select>
-        <select name="Brand" id="Brand">
+        <select className="option" name="Brand" id="Brand">
           <option value="">Apple</option>
         </select>
-        <select name="Sort" id="Sort">
+        <select className="option" name="Sort" id="Sort">
           <option value="">By Rating</option>
           <option value="">By Price</option>
         </select>
