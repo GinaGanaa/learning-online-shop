@@ -6,7 +6,7 @@
   align-items: center;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 3px 6px 10px grey;
+  box-shadow: 3px 6px 10px rgb(145, 142, 142);
   position: relative;
   gap: 8px;
 }
