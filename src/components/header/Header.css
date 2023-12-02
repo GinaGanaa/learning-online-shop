@@ -27,7 +27,7 @@
   height: 30px;
   border-radius: 5px;
   padding-left: 10px;
-  width: 200px;
+  width: 250px;
   border: none;
 }
 .search {
@@ -40,9 +40,10 @@
 }
 .option {
   border-radius: 5px;
-  height: 40px;
-  width: 150px;
+  height: 30px;
+  width: 120px;
   padding-left: 10px;
   font-size: 15px;
   cursor: pointer;
+  border: none;
 }
